@@ -16,11 +16,13 @@ services:
     depends_on:
       - postgresql
       - redis-server
+    restart: always
   redis-server:
     ports:
       - 6379:6379
     volumes:
       - redis-volume:/opt/redis
+    restart: always
   postgresql:
     environment:
       - POSTGRES_USER=test
@@ -28,6 +30,7 @@ services:
       - POSTGRES_DB=postgres
     ports:
         - 5432:5432
+    restart: always
     volumes:
       - postgres-volume:/var/lib/postgresql/data
 
