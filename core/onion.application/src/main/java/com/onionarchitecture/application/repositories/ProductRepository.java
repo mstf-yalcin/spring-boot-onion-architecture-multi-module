@@ -1,0 +1,6 @@
+package com.onionarchitecture.application.repositories;
+
+import com.onionarchitecture.domain.models.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+public interface ProductRepository extends JpaRepository<Product,String> {
+}

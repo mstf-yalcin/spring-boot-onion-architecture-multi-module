@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  onion-architecture:
+    container_name: spring-onion-architecture
+    build:
+      context: .
+      dockerfile: Dockerfile
+  postgresql:
+    image: postgres
+  redis-server:
+    image: redis
+
+volumes:
+  postgres-volume:
+  redis-volume:
